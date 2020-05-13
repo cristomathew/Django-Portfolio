@@ -1,0 +1,21 @@
+{% load static%}
+<header class="l-header">
+    <nav class="navb bd-grid">
+        <div>
+            <a href="#" style="text-decoration: none; color:white;"class="navb__logo">Portfolio</a>
+        </div>
+
+        <div class="navb__menu" id="navb-menu">
+            <ul class="navb__list">
+                <li class="navb__item"><a href="{% url 'index'%}" style="text-decoration: none; color:white;" class="navb__link">Home</a></li>
+                <li class="navb__item"><a href="{%url 'about' %}" style="text-decoration: none; color:white;" class="navb__link">About</a></li>
+                <li class="navb__item"><a href="{%url 'projects' %}" style="text-decoration: none; color:white;"class="navb__link">Projects</a></li>
+                <li class="navb__item"><a href="{%url 'list' %}" style="text-decoration: none; color:white;"class="navb__link">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="navb__toggle" id="navb-toggle">
+            <ion-icon name="menu"></ion-icon>
+        </div>
+    </nav>
+</header>
