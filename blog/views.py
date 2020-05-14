@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Blog
 from django.core.paginator import Paginator
 # Create your views here.
@@ -11,3 +11,9 @@ def list(request):
         'posts': page_posts
     }
     return render(request, 'blog/blog.html', context)
+def detail(request, pk):
+    post = get_object_or_404(Blog, pk=pk)
+    return render(request, 'blog/detail.html', {'post':post})
+
+
+        

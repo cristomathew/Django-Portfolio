@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block content %}
+<link rel="stylesheet" href="{%static 'css/blog.css'%}">
+
+<section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index'%}" style="color: black;">
+              <i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="breadcrumb-item " style="color: black;"> <a href="{%url 'list'%}">Blog</a></li>
+          <li class="breadcrumb-item active"> {{post.title}}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+<div class="container ">
+    <div class="row">
+    <article class="media content-section" style="min-width: 800px;">
+      <img class="rounded-circle article-img" src="{{ user.profile.image.url }}" alt="">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a style="color: black;"class="mr-2" >{{ user.username }}</a>
+          <small style="color: black;"class="text-muted">{{ post.list_date|date:"F d, Y" }}</small>
+        </div>
+        <h2 style="color: black;"><a class="article-title" href="#">{{ post.title }}</a></h2>
+        <img src="{{post.image.url}}">
+        <p class="article-content"><b>Description-</b>{{ post.description }}</p>
+      </div>
+    </article>
+    </div>
+</div>
+{% endblock content %}

@@ -131,3 +131,11 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/login'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'cristomathew7@gmail.com'
+EMAIL_HOST_PASSWORD = 'qvwbqrmycxswtann'
+EMAIL_USE_TLS = True

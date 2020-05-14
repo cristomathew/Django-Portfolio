@@ -8,7 +8,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#" style="color: black;">
+            <a href="{% url 'index'%}" style="color: black;">
               <i class="fa fa-home"></i> Home</a>
           </li>
           <li class="breadcrumb-item active"> Blog</li>
@@ -26,7 +26,7 @@
           <a style="color: black;"class="mr-2" >{{ user.username }}</a>
           <small style="color: black;"class="text-muted">{{ post.list_date|date:"F d, Y" }}</small>
         </div>
-        <h2 style="color: black;"><a class="article-title" href="#">{{ post.title }}</a></h2>
+        <h2 style="color: black;"><a class="article-title" href="{%url 'detail' post.id%}">{{ post.title }}</a></h2>
         <p class="article-content"><b>Summary-</b>{{ post.summary }}</p>
       </div>
     </article>

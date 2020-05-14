@@ -523,15 +523,16 @@
                     <span>&times;</span>
                   </button>
                 </div>
-                <div class="modal-body">
-            <form action="" id="contactform">
+            <div class="modal-body">
+            <form action="{%url 'contact_me'%}" method="POST"id="contactform">
+              {%csrf_token%}
               <div class="form-group">
-                <input type="text" id="name" class="form-control">
+                <input type="text" name="name" id="name" class="form-control">
                 <label for="name" class="form-control-placeholder">Your Name</label>
               </div>
 
               <div class="form-group">
-                <input type="text" id="email" class="form-control">
+                <input type="text" name="email" id="email" class="form-control">
                 <label for="email" class="form-control-placeholder">Your Email</label>
               </div>
 
